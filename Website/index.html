@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Solver</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-YsM2LHVs/4x9tV6GsRfL2ssL8BBBzszHBCo6s7T2mXfqnV0lHqu7f2D4xLJSnQEsT2QKg0h1mJUov5yUhd7+ow==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <h1>Sudoku Solver</h1>
+        <div id="main">
+            <div id="gridArea">
+                <div id="grid">
+                    <div class="row">
+                        <input type="text" maxlength="1" data-mask="0">
+                        <input type="text" maxlength="1" data-mask="0">
+                        <input type="text" maxlength="1" data-mask="0">
+                        <span class="separator">|</span>
+                        <input type="text" maxlength="1" data-mask="0">
+                        <input type="text" maxlength="1" data-mask="0">
+                        <input type="text" maxlength="1" data-mask="0">
+                        <span class="separator">|</span>
+                        <input type="text" maxlength="1" data-mask="0">
+                        <input type="text" maxlength="1" data-mask="0">
+                        <input type="text" maxlength="1" data-mask="0">
+                    </div>
+                    <div class="row">
+                        <input type="text" maxlength="1" data-mask="0">
+                        <input type="text" maxlength="1" data-mask="0">
+                        <input type="text" maxlength="1" data-mask="0">
+                        <span class="separator">|</span>
+                        <input type="text" maxlength="1" data-mask="0">
+                        <input type="text" maxlength="1" data-mask="0">
+                        <input type="text" maxlength="1" data-mask="0">
+                        <span class="separator">|</span>
+                        <input type="text" maxlength="1" data-mask="0">
+                        <input type="text" maxlength="1" data-mask="0">
+                        <input type="text" maxlength="1" data-mask="0">
+                    </div>
+                    <div class="row">
+                        <input type="text" maxlength="1" data-mask="0">
+                        <input type="text" maxlength="1" data-mask="0">
+                        <input type="text" maxlength="1" data-mask="0">
+                        <span class="separator">|</span>
+                        <input type="text" maxlength="1" data-mask="0">
+                        <input type="text" maxlength="1" data-mask="0">
+                        <input type="text" maxlength="1" data-mask="0">
+                        <span class="separator">|</span>
+                        <input type="text" maxlength="1" data-mask="0">
+                        <input type="text" maxlength="1" data-mask="0">
+                        <input type="text" maxlength="1" data-mask="0">
+                    </div>
+                    <br>
+                    <div class="row">
+                        <input type="text" maxlength="1" data-mask="0">
+                        <input type="text" maxlength="1" data-mask="0">
+                        <input type="text" maxlength="1" data-mask="0">
+                        <span class="separator">|</span>
+                        <input type="text" maxlength="1" data-mask="0">
+                        <input type="text" maxlength="1" data-mask="0">
+                        <input type="text" maxlength="1" data-mask="0">
+                        <span class="separator">|</span>
+                        <input type="text" maxlength="1" data-mask="0">
+                        <input type="text" maxlength="1" data-mask="0">
+                        <input type="text" maxlength="1" data-mask="0">
+                    </div>
+                    <div class="row">
+                        <input type="text" maxlength="1" data-mask="0">
+                        <input type="text" maxlength="1" data-mask="0">
+                        <input type="text" maxlength="1" data-mask="0">
+                        <span class="separator">|</span>
+                        <input type="text" maxlength="1" data-mask="0">
+                        <input type="text" maxlength="1" data-mask="0">
+                        <input type="text" maxlength="1" data-mask="0">
+                        <span class="separator">|</span>
+                        <input type="text" maxlength="1" data-mask="0">
+                        <input type="text" maxlength="1" data-mask="0">
+                        <input type="text" maxlength="1" data-mask="0">
+                    </div>
+                    <div class="row">
+                        <input type="text" maxlength="1" data-mask="0">
+                        <input type="text" maxlength="1" data-mask="0">
+                        <input type="text" maxlength="1" data-mask="0">
+                        <span class="separator">|</span>
+                        <input type="text" maxlength="1" data-mask="0">
+                        <input type="text" maxlength="1" data-mask="0">
+                        <input type="text" maxlength="1" data-mask="0">
+                        <span class="separator">|</span>
+                        <input type="text" maxlength="1" data-mask="0">
+                        <input type="text" maxlength="1" data-mask="0">
+                        <input type="text" maxlength="1" data-mask="0">
+                    </div>
+                    <br>
+                    <div class="row">
+                        <input type="text" maxlength="1" data-mask="0">
+                        <input type="text" maxlength="1" data-mask="0">
+                        <input type="text" maxlength="1" data-mask="0">
+                        <span class="separator">|</span>
+                        <input type="text" maxlength="1" data-mask="0">
+                        <input type="text" maxlength="1" data-mask="0">
+                        <input type="text" maxlength="1" data-mask="0">
+                        <span class="separator">|</span>
+                        <input type="text" maxlength="1" data-mask="0">
+                        <input type="text" maxlength="1" data-mask="0">
+                        <input type="text" maxlength="1" data-mask="0">
+                    </div>
+                    <div class="row">
+                        <input type="text" maxlength="1" data-mask="0">
+                        <input type="text" maxlength="1" data-mask="0">
+                        <input type="text" maxlength="1" data-mask="0">
+                        <span class="separator">|</span>
+                        <input type="text" maxlength="1" data-mask="0">
+                        <input type="text" maxlength="1" data-mask="0">
+                        <input type="text" maxlength="1" data-mask="0">
+                        <span class="separator">|</span>
+                        <input type="text" maxlength="1" data-mask="0">
+                        <input type="text" maxlength="1" data-mask="0">
+                        <input type="text" maxlength="1" data-mask="0">
+                    </div>
+                    <div class="row">
+                        <input type="text" maxlength="1" data-mask="0">
+                        <input type="text" maxlength="1" data-mask="0">
+                        <input type="text" maxlength="1" data-mask="0">
+                        <span class="separator">|</span>
+                        <input type="text" maxlength="1" data-mask="0">
+                        <input type="text" maxlength="1" data-mask="0">
+                        <input type="text" maxlength="1" data-mask="0">
+                        <span class="separator">|</span>
+                        <input type="text" maxlength="1" data-mask="0">
+                        <input type="text" maxlength="1" data-mask="0">
+                        <input type="text" maxlength="1" data-mask="0">
+                    </div>
+                    <br>
+                </div>
+            </div>
+            <div id="status"></div>
+        </div>
+        <div class="buttons">
+            <button id="bruteForceSolver"><i class="fas fa-hammer"></i> Brute Force Solver</button>
+            <button id="backtrackingSolver"><i class="fas fa-chess-knight"></i> Backtracking Solver</button>
+            <button id="clearButton"><i class="fas fa-eraser"></i> Clear</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
